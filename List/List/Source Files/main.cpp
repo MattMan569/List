@@ -9,6 +9,7 @@ int main()
 	List::List<int> list;
 
 	std::cout << list.getMaxSize() << std::endl;
+	std::cout << UINT_MAX << std::endl;
 
 
 
