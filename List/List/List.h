@@ -36,6 +36,8 @@ namespace List
 
 		// Delete all nodes within the list
 		~List();
+		
+
 
 		// Return the maximum size of the list
 		unsigned int getMaxSize() const;
