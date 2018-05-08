@@ -6,23 +6,12 @@
 
 int main()
 {
-	List::List<int> list;
-	if (list.print() == List::ReturnCode::ListEmpty) std::cout << "List empty!" << std::endl;
-	list.pushEnd(5);
-	list.pushEnd(4);
+	List::List<std::string> list;
+
+	list.pushEnd("hello,");
+	list.pushEnd("world!");
 	list.print();
 
-	std::cout << list.getMaxSize() << std::endl;
-	std::cout << UINT_MAX << std::endl;
-
-	int * a = nullptr;
-	int * b = a;
-	
-	if (b == nullptr) { std::cout << "True!" << std::endl; }
-	else { std::cout << "False!" << std::endl; }
-
-	//std::cout << "Press any key to continue . . ." << std::endl;
-	//std::cin.get();
 
 	return 0;
 }

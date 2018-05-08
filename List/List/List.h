@@ -33,7 +33,7 @@ namespace List
 
 	public:
 		// Create an empty list
-		List(int maximumSize = UINT_MAX);
+		List(unsigned int maximumSize = UINT_MAX);
 
 		// Create a list from a std::vector
 		List(std::vector<T> input);
