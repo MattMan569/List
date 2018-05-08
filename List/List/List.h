@@ -7,6 +7,13 @@
 namespace List
 {
 
+	enum class ReturnCode
+	{
+		OK,
+		ListEmpty,
+		ListFull
+	};
+
 	template <typename T>
 	class List
 	{
@@ -39,20 +46,25 @@ namespace List
 		
 
 		// Add a node to the end of the list
-		void pushEnd(T data);
+		// Returns false on failure
+		bool pushEnd(T data);
 
 		// Add a node to the start of the list
-		void pushStart(T data);
+		// Returns false on failure
+		bool pushStart(T data);
 
 		// Delete the end node of the list
-		void popEnd();
+		// Returns false if there is no node to pop
+		bool popEnd();
 
 		// Delete the start node of the list
-		void popStart();
+		// Returns false if there is no node to pop
+		bool popStart();
 
 
 		// Print the contents of the list from start to end
-		void print() const;
+		// Returns false if the list is empty
+		bool print() const;
 
 		// Return the maximum size of the list
 		unsigned int getMaxSize() const;
