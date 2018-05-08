@@ -44,6 +44,12 @@ namespace List
 		// Add a node to the start of the list
 		void pushStart(T data);
 
+		// Delete the end node of the list
+		void popEnd();
+
+		// Delete the start node of the list
+		void popStart();
+
 
 		// Print the contents of the list from start to end
 		void print() const;

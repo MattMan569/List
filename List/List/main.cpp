@@ -17,7 +17,7 @@ int main()
 
 	int * a = nullptr;
 	int * b = a;
-
+	
 	if (b == nullptr) { std::cout << "True!" << std::endl; }
 	else { std::cout << "False!" << std::endl; }
 
