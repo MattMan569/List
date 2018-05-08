@@ -14,7 +14,7 @@ namespace List
 		ListEmpty,		// The function cannot continue due to the list being empty
 		ListFull		// The function cannot continue due to the list being full
 	};
-
+	
 	template <typename T>
 	class List
 	{
@@ -42,6 +42,9 @@ namespace List
 		// that separates the list items, such as a comma
 		List(std::string fileName, std::string delimiter);
 
+		// Create a copy of a list
+		List(const List& list);
+
 		// Delete all nodes within the list
 		~List();
 		
@@ -62,8 +65,19 @@ namespace List
 		// Print the contents of the list from start to end
 		ReturnCode print() const;
 
+
+		// Get the pointer to the start of the list
+		typename List<T>::Node * getStart() const;
+
+		// Get the pointer to the end of the list
+		typename List<T>::Node * getEnd() const;
+
 		// Return the maximum size of the list
 		unsigned int getMaxSize() const;
+
+		// Return the current size of the list
+		unsigned int getSize() const;
+
 
 	private:
 		// Pointer to the start of the list
