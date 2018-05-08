@@ -38,6 +38,15 @@ namespace List
 		~List();
 		
 
+		// Add a node to the end of the list
+		void pushEnd(T data);
+
+		// Add a node to the start of the list
+		void pushStart(T data);
+
+
+		// Print the contents of the list from start to end
+		void print() const;
 
 		// Return the maximum size of the list
 		unsigned int getMaxSize() const;
