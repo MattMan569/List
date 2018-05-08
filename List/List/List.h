@@ -10,9 +10,9 @@ namespace List
 	// Possible return codes of List functions
 	enum class ReturnCode
 	{
-		OK,
-		ListEmpty,
-		ListFull
+		OK,				// No error
+		ListEmpty,		// The function cannot continue due to the list being empty
+		ListFull		// The function cannot continue due to the list being full
 	};
 
 	template <typename T>
@@ -47,24 +47,19 @@ namespace List
 		
 
 		// Add a node to the end of the list
-		// Returns false on failure
 		ReturnCode pushEnd(T data);
 
 		// Add a node to the start of the list
-		// Returns false on failure
 		ReturnCode pushStart(T data);
 
 		// Delete the end node of the list
-		// Returns false if there is no node to pop
 		ReturnCode popEnd();
 
 		// Delete the start node of the list
-		// Returns false if there is no node to pop
 		ReturnCode popStart();
 
 
 		// Print the contents of the list from start to end
-		// Returns false if the list is empty
 		ReturnCode print() const;
 
 		// Return the maximum size of the list
