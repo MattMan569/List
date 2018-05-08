@@ -12,6 +12,7 @@ int main()
 	list.pushEnd("world!");
 	list.print();
 
+	system("pause");
 
 	return 0;
 }
