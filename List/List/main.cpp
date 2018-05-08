@@ -7,7 +7,7 @@
 int main()
 {
 	List::List<int> list;
-	list.print();
+	if (list.print() == List::ReturnCode::ListEmpty) std::cout << "List empty!" << std::endl;
 	list.pushEnd(5);
 	list.pushEnd(4);
 	list.print();

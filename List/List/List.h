@@ -7,6 +7,7 @@
 namespace List
 {
 
+	// Possible return codes of List functions
 	enum class ReturnCode
 	{
 		OK,
@@ -47,24 +48,24 @@ namespace List
 
 		// Add a node to the end of the list
 		// Returns false on failure
-		bool pushEnd(T data);
+		ReturnCode pushEnd(T data);
 
 		// Add a node to the start of the list
 		// Returns false on failure
-		bool pushStart(T data);
+		ReturnCode pushStart(T data);
 
 		// Delete the end node of the list
 		// Returns false if there is no node to pop
-		bool popEnd();
+		ReturnCode popEnd();
 
 		// Delete the start node of the list
 		// Returns false if there is no node to pop
-		bool popStart();
+		ReturnCode popStart();
 
 
 		// Print the contents of the list from start to end
 		// Returns false if the list is empty
-		bool print() const;
+		ReturnCode print() const;
 
 		// Return the maximum size of the list
 		unsigned int getMaxSize() const;
