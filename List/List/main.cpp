@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "List.h"
 
+
 int main()
 {
 	List::List<std::string> list;
