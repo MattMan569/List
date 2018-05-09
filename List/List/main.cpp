@@ -11,6 +11,9 @@ int main()
 
 	list.pushEnd("hello,");
 	list.pushEnd("world!");
+	list.pushEnd(" ");
+	list.pushEnd("bye!");
+	list.pushStart("...");
 	list.print();
 
 	List::List<std::string> list2(list);

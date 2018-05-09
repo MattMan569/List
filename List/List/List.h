@@ -13,7 +13,6 @@ namespace List
 		OK,				// No error
 		ListEmpty,		// The function cannot continue due to the list being empty
 		ListFull,		// The function cannot continue due to the list being full
-		InvalidType		// The list type is not compatible with this function
 	};
 	
 	template <typename T>
@@ -48,11 +47,6 @@ namespace List
 
 		// Delete all nodes within the list
 		~List();
-
-
-		// Create a randomized list of the specified size
-		// and within the specified range
-		List makeRandomList(T min, T max, unsigned int size);
 		
 
 		// Add a node to the end of the list
