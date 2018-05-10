@@ -7,7 +7,7 @@
 namespace List
 {
 	// Using the same value as std list for the maximum number of nodes
-	const unsigned int max_nodes = 357913941U;
+	const unsigned int MAX_NODES = 357913941U;
 
 	// Possible return codes of List functions
 	enum class ReturnCode
@@ -36,7 +36,7 @@ namespace List
 
 	public:
 		// Create an empty list
-		List(unsigned int maximumSize = max_nodes);
+		List(unsigned int maximumSize = MAX_NODES);
 
 		// Create a list from a std::vector
 		List(std::vector<T> input);
@@ -45,7 +45,7 @@ namespace List
 		// that separates the list items, such as a comma
 		List(std::string fileName, std::string delimiter);
 
-		// Create a copy of a list
+		// Create a new list with the same size and nodes as the copied list
 		List(const List& list);
 
 		// Delete all nodes within the list
@@ -74,6 +74,17 @@ namespace List
 
 		// Remove the first element matching the given data
 		ReturnCode remove(T data);
+
+		// Remove all nodes whose data matches the given condition
+		ReturnCode removeIf(std::string condition);
+
+		// Remove all duplicate elements in the list
+		// Returns the number of nodes removed
+		unsigned int removeDuplicates();
+
+
+		// Reverse the order of the list
+		ReturnCode reverse();
 
 
 		// Print the contents of the list from start to end
