@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include "List.h"
+#include <list>
 
 using std::cout;
 using std::endl;

@@ -6,6 +6,8 @@
 
 namespace List
 {
+	// Using the same value as std list for the maximum number of nodes
+	const unsigned int max_nodes = 357913941U;
 
 	// Possible return codes of List functions
 	enum class ReturnCode
@@ -34,7 +36,7 @@ namespace List
 
 	public:
 		// Create an empty list
-		List(unsigned int maximumSize = UINT_MAX);
+		List(unsigned int maximumSize = max_nodes);
 
 		// Create a list from a std::vector
 		List(std::vector<T> input);
