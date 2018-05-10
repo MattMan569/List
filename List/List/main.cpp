@@ -18,6 +18,7 @@ int main()
 
 	List::List<std::string> list2(list);
 	list2.print();
+	list.print();
 
 	std::cout << list.getMaxSize() << " " << list2.getMaxSize() << std::endl;
 
