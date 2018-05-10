@@ -13,6 +13,7 @@ namespace List
 		OK,				// No error
 		ListEmpty,		// The function cannot continue due to the list being empty
 		ListFull,		// The function cannot continue due to the list being full
+		NotFound		// No node was found when searching or deleting
 	};
 	
 	template <typename T>
@@ -47,6 +48,10 @@ namespace List
 
 		// Delete all nodes within the list
 		~List();
+
+
+		// Overloaded assignment operator
+		List & operator=(const List & list);
 		
 
 		// Add a node to the end of the list
@@ -60,6 +65,13 @@ namespace List
 
 		// Delete the start node of the list
 		ReturnCode popStart();
+
+
+		// Remove all elements
+		ReturnCode removeAll();
+
+		// Remove the first element matching the given data
+		ReturnCode remove(T data);
 
 
 		// Print the contents of the list from start to end
