@@ -40,6 +40,22 @@ int main()
 	cout << endl;
 	l3.print();
 
+	cout << endl << endl << "Starting l3 removal..." << endl << endl;
+	cout << "Size: " << l3.getSize() << endl;
+	l3.remove(3);
+	cout << "Size: " << l3.getSize() << endl;
+	l3.print();
+	l3.remove(4);
+	cout << "Size: " << l3.getSize() << endl;
+	l3.print();
+	l3.remove(1);
+	cout << "Size: " << l3.getSize() << endl;
+	l3.print();
+	cout << "Size: " << l3.getSize() << endl;
+	l3.remove(2);
+	l3.print();
+	cout << "Size: " << l3.getSize() << endl;
+
 
 	//system("pause");
 
