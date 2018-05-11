@@ -80,6 +80,7 @@ namespace List
 
 		// Remove all duplicate elements in the list
 		// Returns the number of nodes removed
+		/// INCOMPLETE: Assumes a sorted list!
 		unsigned int removeDuplicates();
 
 
